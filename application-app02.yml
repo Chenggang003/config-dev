@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/spring_cloud_test
+    username: root
+    password: asdasd
+    driver-class-name: com.mysql.jdbc.Driver
+
+  application:
+    name: steam-app-02
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+server:
+  port: 9091
+eureka:
+  instance:
+    appname: ${spring.application.name}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
